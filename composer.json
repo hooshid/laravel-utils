@@ -1,0 +1,34 @@
+{
+    "name": "hooshid/laravel-utils",
+    "description": "A Elegant Utils for Laravel",
+    "keywords": ["laravel", "utils", "hooshid"],
+    "homepage": "https://github.com/hooshid/laravel-utils",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alireza Kamali",
+            "email": "arka1373@gmail.com",
+            "homepage": "https://github.com/arkamali",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.3",
+        "illuminate/support": "^7|^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hooshid\\Utils\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hooshid\\Utils\\UtilsServiceProvider"
+            ]
+        }
+    }
+}
