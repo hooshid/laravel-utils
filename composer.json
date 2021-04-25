@@ -25,10 +25,5 @@
         }
     },
     "extra": {
-        "laravel": {
-            "providers": [
-                "Hooshid\\Utils\\UtilsServiceProvider"
-            ]
-        }
     }
 }
