@@ -25,10 +25,8 @@ class DataSet
         if ($action == "insert") {
             unset($dataSet['id']);
             $dataSet['created_at'] = now();
-            $dataSet['updated_at'] = now();
-        } else {
-            $dataSet['updated_at'] = now();
         }
+        $dataSet['updated_at'] = now();
 
         return $dataSet;
     }
