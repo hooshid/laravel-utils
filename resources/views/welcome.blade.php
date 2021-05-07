@@ -40,6 +40,10 @@
         Schema Builder
     </a>
 
+    <a href="/utils/phpinfo">
+        php Info
+    </a>
+
 </div>
 </body>
 </html>
