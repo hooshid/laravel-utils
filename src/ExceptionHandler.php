@@ -2,7 +2,7 @@
 
 namespace Hooshid\Utils;
 
-class HandlerException
+class ExceptionHandler
 {
     /**
      * Render an exception into an HTTP response.
