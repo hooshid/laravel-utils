@@ -51,7 +51,11 @@ class DataSet
                 }
             } // insert key & value in array
             elseif ($obj->key) {
-                $dataSet[$obj->key] = trim(strip_tags($obj->value));
+                if(isset($obj->value)) {
+                    $dataSet[$obj->key] = trim(strip_tags($obj->value));
+                } else {
+                    $dataSet[$obj->key] = null;
+                }
             }
         }
 
