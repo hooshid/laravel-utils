@@ -8,9 +8,6 @@ class PublishController extends Controller
 {
     public function publish()
     {
-        //Artisan::call('cache:clear');
-        //echo Artisan::output()."<br>";
-
         Artisan::call('config:clear');
         echo Artisan::output() . "<br>";
 
@@ -21,9 +18,6 @@ class PublishController extends Controller
         echo Artisan::output() . "<br>";
 
         Artisan::call('event:clear');
-        echo Artisan::output()."<br>";
-
-        Artisan::call('optimize:clear');
         echo Artisan::output()."<br>";
 
         if (config('app.env') == "production") {
@@ -42,9 +36,6 @@ class PublishController extends Controller
             echo Artisan::output()."<br>";
 
             Artisan::call('event:cache');
-            echo Artisan::output()."<br>";
-
-            Artisan::call('optimize');
             echo Artisan::output()."<br>";
         }
 
