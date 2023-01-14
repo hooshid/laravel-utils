@@ -21,7 +21,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^6|^7|^8"
+        "illuminate/support": ">=6.0"
     },
     "autoload": {
         "psr-4": {
