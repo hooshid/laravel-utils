@@ -13,7 +13,7 @@ class DataSet
         $action = "insert";
         foreach ($json as $obj) {
             // insert or update?
-            if ($obj->key == "id" and $obj->value) {
+            if ($obj->key == "id" and $obj->value and $obj->value != "null") {
                 $action = "update";
             }
 
@@ -51,7 +51,11 @@ class DataSet
                 }
             } // insert key & value in array
             elseif ($obj->key) {
-                if(isset($obj->value)) {
+                if ($obj->type == 'boolean') {
+                    $dataSet[$obj->key] = $obj->value == 'true' ? 1 : 0;
+                } else if ($obj->type == 'int') {
+                    $dataSet[$obj->key] = (int)trim($obj->value);
+                } else if (isset($obj->value)) {
                     $dataSet[$obj->key] = trim(strip_tags($obj->value));
                 } else {
                     $dataSet[$obj->key] = null;
