@@ -51,7 +51,9 @@ class DataSet
                 }
             } // insert key & value in array
             elseif ($obj->key) {
-                if ($obj->type == 'boolean') {
+                if (empty($obj->value) or $obj->value == 'null') {
+                    $dataSet[$obj->key] = null;
+                } else if ($obj->type == 'boolean') {
                     $dataSet[$obj->key] = $obj->value == 'true' ? 1 : 0;
                 } else if ($obj->type == 'int') {
                     $dataSet[$obj->key] = (int)trim($obj->value);
