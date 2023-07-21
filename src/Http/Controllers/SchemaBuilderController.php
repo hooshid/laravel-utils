@@ -135,7 +135,7 @@ class SchemaBuilderController extends Controller
         $cast = 'protected $casts = [
 ';
         foreach ($tableColumns as $col) {
-            if ($col->Type === "tinyint(3) unsigned" or $col->Type === "tinyint(3)") {
+            if ($col->Type === "tinyint(3) unsigned" or $col->Type === "tinyint(3)" or $col->Type === "tinyint unsigned") {
                 $type = "boolean";
             } elseif (stripos($col->Type, "bigint") !== false or
                 stripos($col->Type, "smallint") !== false or
